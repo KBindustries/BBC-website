@@ -428,25 +428,6 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
-    body {
-        background-attachment: scroll;
-        background-size: cover;
-    }
-
-    .main-nav {
-        min-height: 50vh;
-        padding: 100px 15px 20px;
-    }
-
-    .nav-text h1 {
-        font-size: 2.2rem;
-        line-height: 1.2;
-    }
-
-    .nav-text h3 {
-        font-size: 1rem;
-        margin-top: 10px;
-    }
 
     .about-content {
         margin: 15px auto 0;
