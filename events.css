@@ -1,0 +1,506 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("image/Green\ and\ White\ Church\ Gathering.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+}
+
+
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7%;
+    left: 4%
+
+}
+#sidenav{
+    width: 100%;
+    height:85px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #009688;
+    z-index: 2;
+    transition: 0.5s;
+
+}
+#sidenav nav{
+    margin: 0;
+}
+#sidenav nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 10px;
+    margin: 0;
+}
+#sidenav nav ul li{
+    list-style: none;
+    margin: 0;
+    position: relative;
+}
+#sidenav nav ul li a,
+#sidenav nav ul li label{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 7px;
+}
+#sidenav nav ul li.dropdown a{
+    cursor: pointer;
+}
+#sidenav nav ul li .dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #009688;
+    padding: 8px 0;
+    min-width: 180px;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    z-index: 5;
+}
+#sidenav nav ul li.dropdown:hover .dropdown-menu{
+    display: block;
+}
+#sidenav nav ul li .dropdown-menu li{
+    margin: 0;
+}
+#sidenav nav ul li .dropdown-menu li a{
+    display: block;
+    padding: 10px 14px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+#sidenav nav ul li .dropdown-menu li a:hover{
+    background: rgba(255,255,255,0.12);
+}
+#menubtn,
+#close-btn {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: none;
+    right: 20px;
+    top: 20px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.95);
+    color: #009688;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 11;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#menubtn {
+    display: none;
+}
+
+#close-btn {
+    display: none;
+}
+
+#menubtn:hover,
+#close-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+@media only screen and (max-width: 600px){
+    .nav-text{
+        padding: 120px 20px 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .nav-text h1{
+        font-size: 35px;
+        line-height: 1.1;
+        margin: 0 auto;
+    }
+    .nav-text p{
+        font-size: 15px;
+        padding: 3px 0 0;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+    .nav-btn{
+        margin: 40px auto 0;
+    }
+    .nav-btn a{
+        display: inline-block;
+        margin: 12px 6px;
+        padding: 12px 16px;
+    }
+    #menubtn{
+        display: inline-flex;
+    }
+    #close-btn{
+        display: none;
+    }
+    #sidenav{
+        height: 85px;
+    }
+    #sidenav nav ul{
+        display: none;
+    }
+    #sidenav.open{
+        height: 100vh;
+        overflow-y: auto;
+    }
+    #sidenav.open nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 100px 20px 20px;
+        margin: 0;
+    }
+    #sidenav.open nav ul li{
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    #sidenav.open nav ul li:last-child{
+        border-bottom: none;
+    }
+    #sidenav.open nav ul li a,
+    #sidenav.open nav ul li label{
+        font-size: 16px;
+        padding: 14px 16px;
+        display: block;
+    }
+    #sidenav.open #menubtn{
+        display: none;
+    }
+    #sidenav.open #close-btn{
+        display: inline-flex;
+    }
+    #sidenav.open nav ul li .dropdown-menu{
+        display: block;
+        position: static;
+        background: rgba(255,255,255,0.08);
+        box-shadow: none;
+        padding: 0;
+        min-width: auto;
+    }
+    #sidenav.open nav ul li .dropdown-menu li a{
+        padding-left: 28px;
+    }
+}
+
+.main-nav{
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 40px;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.nav-text{
+    text-align: center;
+    color: #009688;
+    max-width: 900px;
+    transform: translateY(0);
+    will-change: transform ;
+}
+
+.nav-text h1{
+    font-family: 'Courgette';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    font-display: swap;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.nav-text p{
+    font-size: 20px;
+    font-style: italic;
+    margin: 15px 0 0;
+}
+
+/* about content */
+.about-content {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 20px auto 0;
+    padding: 30px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pastor-card {
+    margin-top: 0;
+}
+
+.about-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;
+    color: #333;
+    width: 100%;
+}
+
+.about-text h2 {
+    font-family: 'Kaushan Script';
+    font-style: normal;
+    font-display: swap;
+    color: #009688;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.about-text p {
+    font-family: 'Ralway', sans-serif;
+    font-style: normal;
+    font-display: swap;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.pastor-content {
+            width: 100%;
+         }
+
+         .testimonial-row {
+            color:#009688 ;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 100%;
+         }
+         .testimonial-col {
+            
+            flex: 1;
+            width: 100%;
+            min-width: 300px;
+            max-width: 100%;
+         }
+
+         .card {
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 150px;
+            background: #009688;
+            padding: 90px;
+            justify-content: center;
+         }
+         .card-image {
+            background-color: #fff;
+            flex-shrink: 0;
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            border: 4px solid #fff;
+            box-sizing: border-box;
+         }
+
+         .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+         }
+
+         .card-text h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.7rem;
+            color: #333;
+            text-align: left;
+            font-family: 'Courgette';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+         }
+
+         .card-text p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 2.0;
+            text-align: left;
+         }
+
+         .other{
+            background-color: #fff;
+            margin: 0 ;
+            padding: 20px;
+            text-align: center;
+         }
+         .other h2{
+            font-family: 'Courgette';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+         }
+
+/* footer */
+
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 20px;
+}
+
+h3 {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form Styles */
+input {
+  display: block;
+  width: 92%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #fff;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
+    .main-nav {
+        min-height: 50vh;
+        padding: 100px 15px 20px;
+    }
+
+    .nav-text h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .nav-text h3 {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .about-content {
+        margin: 15px auto 0;
+        padding: 20px 15px;
+        min-height: auto;
+    }
+
+    .about-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .testimonial-row {
+        width: 100%;
+    }
+
+    .testimonial-col {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .card-image {
+        width: 100%;
+        max-width: 500px;
+        height: 220px;
+    }
+
+    .card-text {
+        width: 100%;
+    }
+
+    .card-text h2{
+        text-align: center;
+    }
+    .card-text p {
+        text-align: left;
+    }
+
+    .site-footer {
+        padding: 30px 15px;
+    }
+
+    .footer-column {
+        min-width: 100%;
+        padding: 0;
+    }
+}
