@@ -495,22 +495,32 @@ hr{
     .testimonial-col2 .user,
     .testimonial-col3 .user{
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         width: 100%;
+        gap: 12px;
     }
     .testimonial-col1 .user img,
     .testimonial-col2 .user img,
     .testimonial-col3 .user img{
-        width: 100%;
-        max-width: 320px;
+        width: min(100%, 180px);
+        max-width: 180px;
         height: auto;
         border-radius: 10px;
         margin: 0 auto;
+        display: block;
+    }
+    .testimonial-col1 .user-info,
+    .testimonial-col2 .user-info,
+    .testimonial-col3 .user-info{
+        width: 100%;
+        text-align: center;
     }
     .testimonial-col1 h2,
     .testimonial-col2 h2,
     .testimonial-col3 h2{
-        margin-top: auto;
+        margin-top: 0;
         text-align: center;
     }
     .service-box{
